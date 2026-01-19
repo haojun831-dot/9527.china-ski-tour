@@ -23,6 +23,7 @@ header{
 }
 .container{max-width:1100px;margin:auto;}
 h1{font-size:44px;margin-bottom:12px;}
+
 section{
   background:#fff;
   margin:20px;
@@ -30,32 +31,40 @@ section{
   border-radius:16px;
   box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
 }
+
 .card{background:#fafafa;padding:24px;border-radius:14px;}
 .lang{font-size:14px;opacity:.85}
 
 .btn{
   display:inline-block;
-  margin:10px;
-  padding:14px 28px;
+  margin-top:26px;
+  padding:16px 34px;
   border-radius:30px;
   color:#fff;
   text-decoration:none;
   font-weight:600;
+  font-size:18px;
 }
 
-.whatsapp{background:#25D366;}
-.line{background:#00C300;}
-.wechat{background:#2DB400;}
-
-.gallery img{
-  width:100%;
-  border-radius:14px;
+.whatsapp{
+  background:#25D366;
+  box-shadow:0 0 0 rgba(37,211,102,.6);
+  animation:pulse 2.5s infinite;
 }
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+.gallery img{width:100%;border-radius:14px}
 
 footer{text-align:center;padding:30px;color:#777}
 
@@ -90,11 +99,24 @@ footer{text-align:center;padding:30px;color:#777}
 
 <h1 data-lang="en">China Ski Tour from Bangkok</h1>
 <p data-lang="en">7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village</p>
-<p data-lang="en" class="lang">Perfect for Beginners, Families & Ski Lovers</p>
+<p data-lang="en" class="lang">
+Perfect for Beginners, Families & Ski Lovers · Licensed Travel Agency
+</p>
 
 <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
-<p data-lang="zh" style="display:none;">7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡</p>
-<p data-lang="zh" style="display:none;" class="lang">适合初学者 / 家庭 / 滑雪爱好者</p>
+<p data-lang="zh" style="display:none;">
+7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡
+</p>
+<p data-lang="zh" style="display:none;" class="lang">
+适合初学者 / 家庭 / 滑雪爱好者 · 正规旅行社服务
+</p>
+
+<!-- WhatsApp CTA（一个按钮，文案自动切换） -->
+<a id="whatsappBtn"
+   href="https://wa.me/66618268749"
+   target="_blank"
+   class="btn whatsapp">
+</a>
 
 <p class="lang">Feb 1 – Feb 7 · 7 Days 6 Nights</p>
 
@@ -118,13 +140,13 @@ footer{text-align:center;padding:30px;color:#777}
 <h2 data-lang="zh" style="display:none;">7 天行程安排</h2>
 
 <div class="grid">
-<div class="card">Day 1 · Arrival in China / Airport Transfer</div>
-<div class="card">Day 2 · Ski Training & Resort Experience</div>
-<div class="card">Day 3 · Full Day Skiing</div>
-<div class="card">Day 4 · Snow Village Exploration</div>
-<div class="card">Day 5 · Harbin Ice & Snow World</div>
-<div class="card">Day 6 · City Tour / Free Time</div>
-<div class="card">Day 7 · Departure</div>
+  <div class="card">Day 1 · Arrival in China / Transfer</div>
+  <div class="card">Day 2 · Ski Training & Resort Experience</div>
+  <div class="card">Day 3 · Full Day Skiing</div>
+  <div class="card">Day 4 · Snow Village Exploration</div>
+  <div class="card">Day 5 · Ice & Snow World</div>
+  <div class="card">Day 6 · City Tour / Free Time</div>
+  <div class="card">Day 7 · Return to Bangkok</div>
 </div>
 </section>
 
@@ -133,9 +155,9 @@ footer{text-align:center;padding:30px;color:#777}
 <h2>Contact Our Travel Team</h2>
 <p class="lang">Official Licensed Travel Agency · Bangkok</p>
 
-<a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
-<a class="btn line" href="#" onclick="alert('LINE ID: yourlineid')">LINE</a>
-<a class="btn wechat" href="#" onclick="alert('WeChat ID: yourwechatid')">WeChat</a>
+<a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank">
+  WhatsApp
+</a>
 </section>
 
 <footer>
@@ -145,21 +167,25 @@ footer{text-align:center;padding:30px;color:#777}
 <script>
 function setLang(lang){
   document.querySelectorAll('[data-lang]').forEach(el=>{
-    el.style.display=el.getAttribute('data-lang')===lang?'':'none';
+    el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
   });
+
+  const btn = document.getElementById('whatsappBtn');
+  btn.innerText = lang === 'zh'
+    ? '💬 WhatsApp 立即咨询'
+    : '💬 Contact us on WhatsApp';
+
   localStorage.setItem('lang',lang);
 }
 
-/* Auto language detect */
-const saved=localStorage.getItem('lang');
+/* 自动语言识别 + 默认英文 */
+const saved = localStorage.getItem('lang');
 if(saved){
   setLang(saved);
 }else{
-  const browserLang=navigator.language.startsWith('zh')?'zh':'en';
-  setLang(browserLang);
+  setLang(navigator.language.startsWith('zh') ? 'zh' : 'en');
 }
 </script>
 
 </body>
 </html>
-
