@@ -71,3 +71,69 @@ footer{text-align:center;padding:30px;color:#777}
 
 <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
 <p data-lang="zh" style="display:none;">7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡</p>
+
+<!-- Contact Buttons -->
+<div id="contactBtns"></div>
+
+</div>
+</div>
+</header>
+
+<!-- HIGHLIGHTS -->
+<section class="container">
+<h2>Tour Highlights</h2>
+<div class="grid">
+  <div class="card">Top Ski Resorts · Yabuli / Chongli</div>
+  <div class="card">Harbin Ice & Snow World</div>
+  <div class="card">Snow Village Experience</div>
+  <div class="card">Ski Equipment & Coaching</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="container">
+<h2>Contact Our Travel Team</h2>
+<div id="contactBtnsBottom"></div>
+</section>
+
+<footer>
+© 2026 Licensed Travel Agency · Bangkok
+</footer>
+
+<script>
+function contactButtons(lang){
+  const zh = `
+  <a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank" onclick="track('WhatsApp')">WhatsApp 咨询</a>
+  <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank" onclick="track('LINE')">LINE 咨询</a>
+  <a class="btn wechat" href="wechat.html" target="_blank" onclick="track('WeChat')">微信咨询</a>
+  `;
+
+  const en = `
+  <a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank" onclick="track('WhatsApp')">WhatsApp</a>
+  <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank" onclick="track('LINE')">LINE</a>
+  <a class="btn wechat" href="wechat.html" target="_blank" onclick="track('WeChat')">WeChat</a>
+  `;
+
+  return lang === 'zh' ? zh : en;
+}
+
+function track(channel){
+  fbq('track','Contact',{method:channel});
+  gtag('event','contact_click',{method:channel});
+}
+
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
+  });
+  document.getElementById('contactBtns').innerHTML = contactButtons(lang);
+  document.getElementById('contactBtnsBottom').innerHTML = contactButtons(lang);
+  localStorage.setItem('lang',lang);
+}
+
+/* 默认英文 */
+setLang(localStorage.getItem('lang') || 'en');
+</script>
+
+</body>
+</html>
