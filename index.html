@@ -5,82 +5,51 @@
 <title>China Ski Tour from Bangkok</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- ================= Facebook Pixel ================= -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID_HERE');
+fbq('track', 'PageView');
+</script>
+
+<!-- ================= Google Ads / GA4 ================= -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX');
+</script>
+
 <style>
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-  background:#f4f6f8;color:#333;
-}
-header{
-  min-height:480px;
-  background:url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1800&q=80")
-  center/cover no-repeat;
-}
-.overlay{
-  background:rgba(0,0,0,.55);
-  color:#fff;
-  padding:90px 20px;
-}
-.container{max-width:1100px;margin:auto;}
-h1{font-size:44px;margin-bottom:12px;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;background:#f4f6f8;color:#333}
+header{min-height:500px;background:url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat}
+.overlay{background:rgba(0,0,0,.55);color:#fff;padding:90px 20px}
+.container{max-width:1100px;margin:auto;text-align:center}
+h1{font-size:44px;margin-bottom:12px}
 
-section{
-  background:#fff;
-  margin:20px;
-  padding:40px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
+section{background:#fff;margin:20px;padding:40px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fafafa;padding:24px;border-radius:14px}
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
+.btn{display:inline-block;margin:10px;padding:14px 30px;border-radius:30px;color:#fff;text-decoration:none;font-weight:600;font-size:16px}
+.whatsapp{background:#25D366}
+.line{background:#06C755}
+.wechat{background:#07C160}
 
-.card{background:#fafafa;padding:24px;border-radius:14px;}
-.lang{font-size:14px;opacity:.85}
-
-.btn{
-  display:inline-block;
-  margin-top:26px;
-  padding:16px 34px;
-  border-radius:30px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  font-size:18px;
-}
-
-.whatsapp{
-  background:#25D366;
-  box-shadow:0 0 0 rgba(37,211,102,.6);
-  animation:pulse 2.5s infinite;
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
-  70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
-}
-
-.gallery img{width:100%;border-radius:14px}
+.lang-switch{position:fixed;top:20px;right:20px;z-index:9999}
+.lang-switch button{margin-left:6px;padding:6px 10px;border-radius:6px;border:none;cursor:pointer}
 
 footer{text-align:center;padding:30px;color:#777}
-
-.lang-switch{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:9999;
-}
-.lang-switch button{
-  margin-left:6px;
-  padding:6px 10px;
-  border-radius:6px;
-  border:none;
-  cursor:pointer;
-}
 </style>
 </head>
 
@@ -95,97 +64,10 @@ footer{text-align:center;padding:30px;color:#777}
 <!-- HERO -->
 <header>
 <div class="overlay">
-<div class="container" style="text-align:center;">
+<div class="container">
 
 <h1 data-lang="en">China Ski Tour from Bangkok</h1>
 <p data-lang="en">7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village</p>
-<p data-lang="en" class="lang">
-Perfect for Beginners, Families & Ski Lovers · Licensed Travel Agency
-</p>
 
 <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
-<p data-lang="zh" style="display:none;">
-7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡
-</p>
-<p data-lang="zh" style="display:none;" class="lang">
-适合初学者 / 家庭 / 滑雪爱好者 · 正规旅行社服务
-</p>
-
-<!-- WhatsApp CTA（一个按钮，文案自动切换） -->
-<a id="whatsappBtn"
-   href="https://wa.me/66618268749"
-   target="_blank"
-   class="btn whatsapp">
-</a>
-
-<p class="lang">Feb 1 – Feb 7 · 7 Days 6 Nights</p>
-
-</div>
-</div>
-</header>
-
-<!-- GALLERY -->
-<section class="container">
-<h2>Experience Highlights</h2>
-<div class="grid gallery">
-  <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
-  <img src="https://images.unsplash.com/photo-1517821099606-cef63a9b1e8a">
-  <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66">
-</div>
-</section>
-
-<!-- ITINERARY -->
-<section class="container">
-<h2 data-lang="en">7-Day Itinerary</h2>
-<h2 data-lang="zh" style="display:none;">7 天行程安排</h2>
-
-<div class="grid">
-  <div class="card">Day 1 · Arrival in China / Transfer</div>
-  <div class="card">Day 2 · Ski Training & Resort Experience</div>
-  <div class="card">Day 3 · Full Day Skiing</div>
-  <div class="card">Day 4 · Snow Village Exploration</div>
-  <div class="card">Day 5 · Ice & Snow World</div>
-  <div class="card">Day 6 · City Tour / Free Time</div>
-  <div class="card">Day 7 · Return to Bangkok</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="container" style="text-align:center;">
-<h2>Contact Our Travel Team</h2>
-<p class="lang">Official Licensed Travel Agency · Bangkok</p>
-
-<a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank">
-  WhatsApp
-</a>
-</section>
-
-<footer>
-© 2026 Licensed Travel Agency · Bangkok
-</footer>
-
-<script>
-function setLang(lang){
-  document.querySelectorAll('[data-lang]').forEach(el=>{
-    el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
-  });
-
-  const btn = document.getElementById('whatsappBtn');
-  btn.innerText = lang === 'zh'
-    ? '💬 WhatsApp 立即咨询'
-    : '💬 Contact us on WhatsApp';
-
-  localStorage.setItem('lang',lang);
-}
-
-/* 自动语言识别 + 默认英文 */
-const saved = localStorage.getItem('lang');
-if(saved){
-  setLang(saved);
-}else{
-  setLang(navigator.language.startsWith('zh') ? 'zh' : 'en');
-}
-</script>
-
-</body>
-</html>
+<p data-lang="zh" style="display:none;">7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡</p>
