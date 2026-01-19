@@ -1,119 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>China Ski Tour from Bangkok</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>China Ski Tour from Bangkok</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+  background:#f4f6f8;color:#333;
+}
+header{
+  min-height:480px;
+  background:url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1800&q=80")
+  center/cover no-repeat;
+}
+.overlay{
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:90px 20px;
+}
+.container{max-width:1100px;margin:auto;}
+h1{font-size:44px;margin-bottom:12px;}
+section{
+  background:#fff;
+  margin:20px;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{background:#fafafa;padding:24px;border-radius:14px;}
+.lang{font-size:14px;opacity:.85}
 
-    /* HERO */
-    header {
-      min-height: 420px;
-      background: url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1800&q=80")
-        center / cover no-repeat;
-    }
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:14px 28px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.55);
-      color: #fff;
-      padding: 90px 20px;
-    }
+.whatsapp{background:#25D366;}
+.line{background:#00C300;}
+.wechat{background:#2DB400;}
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+.gallery img{
+  width:100%;
+  border-radius:14px;
+}
 
-    h1 {
-      font-size: 44px;
-      margin-bottom: 10px;
-    }
+footer{text-align:center;padding:30px;color:#777}
 
-    section {
-      background: #fff;
-      margin: 20px;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fafafa;
-      padding: 24px;
-      border-radius: 14px;
-    }
-
-    .lang {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-    }
-
-    /* WhatsApp CTA */
-    .whatsapp-btn {
-      background: linear-gradient(135deg, #25D366, #1ebe5d);
-      box-shadow: 0 0 0 rgba(37, 211, 102, 0.6);
-      animation: pulse 2.5s infinite;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      font-size: 18px;
-    }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.06);
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-    }
-
-    /* Language switch */
-    .lang-switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 9999;
-    }
-
-    .lang-switch button {
-      margin-left: 6px;
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+.lang-switch{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:9999;
+}
+.lang-switch button{
+  margin-left:6px;
+  padding:6px 10px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
@@ -126,66 +85,81 @@
 
 <!-- HERO -->
 <header>
-  <div class="overlay">
-    <div class="container" style="text-align:center;">
+<div class="overlay">
+<div class="container" style="text-align:center;">
 
-      <!-- English -->
-      <h1 data-lang="en">China Ski Tour from Bangkok</h1>
-      <p data-lang="en" style="font-size:18px; margin-top:10px;">
-        7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village
-      </p>
-      <p data-lang="en" style="margin-top:12px; opacity:0.9;">
-        Perfect for Beginners, Families & Ski Lovers · Full Travel Agency Service
-      </p>
+<h1 data-lang="en">China Ski Tour from Bangkok</h1>
+<p data-lang="en">7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village</p>
+<p data-lang="en" class="lang">Perfect for Beginners, Families & Ski Lovers</p>
 
-      <!-- Chinese -->
-      <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
-      <p data-lang="zh" style="display:none; font-size:18px; margin-top:10px;">
-        7天6晚｜顶级滑雪场 + 冰雪大世界 + 雪乡体验
-      </p>
-      <p data-lang="zh" style="display:none; margin-top:12px; opacity:0.9;">
-        适合初学者 / 家庭 / 滑雪爱好者 · 全程旅行社服务
-      </p>
+<h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
+<p data-lang="zh" style="display:none;">7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡</p>
+<p data-lang="zh" style="display:none;" class="lang">适合初学者 / 家庭 / 滑雪爱好者</p>
 
-      <!-- CTA -->
-      <a href="https://wa.me/66618268749"
-         target="_blank"
-         class="btn whatsapp-btn"
-         id="ctaBtn">
-        💬 Contact us on WhatsApp
-      </a>
+<p class="lang">Feb 1 – Feb 7 · 7 Days 6 Nights</p>
 
-      <p class="lang" style="margin-top:16px;">
-        Feb 1 – Feb 7 · 7 Days 6 Nights
-      </p>
-
-    </div>
-  </div>
+</div>
+</div>
 </header>
 
+<!-- GALLERY -->
 <section class="container">
-  <h2>Tour Highlights</h2>
-  <p class="lang">行程亮点</p>
-  <div class="grid">
-    <div class="card">Top Ski Resorts · 亚布力 / 崇礼</div>
-    <div class="card">Harbin Ice & Snow World · 冰雪大世界</div>
-    <div class="card">Snow Village · 中国雪乡</div>
-    <div class="card">Ski Equipment & Coaching · 滑雪教学</div>
-  </div>
+<h2>Experience Highlights</h2>
+<div class="grid gallery">
+  <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
+  <img src="https://images.unsplash.com/photo-1517821099606-cef63a9b1e8a">
+  <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66">
+</div>
 </section>
 
+<!-- ITINERARY -->
+<section class="container">
+<h2 data-lang="en">7-Day Itinerary</h2>
+<h2 data-lang="zh" style="display:none;">7 天行程安排</h2>
+
+<div class="grid">
+<div class="card">Day 1 · Arrival in China / Airport Transfer</div>
+<div class="card">Day 2 · Ski Training & Resort Experience</div>
+<div class="card">Day 3 · Full Day Skiing</div>
+<div class="card">Day 4 · Snow Village Exploration</div>
+<div class="card">Day 5 · Harbin Ice & Snow World</div>
+<div class="card">Day 6 · City Tour / Free Time</div>
+<div class="card">Day 7 · Departure</div>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section class="container" style="text-align:center;">
-  <h2>Contact Us</h2>
-  <p class="lang">联系旅行社 · 获取详细行程</p>
-  <a href="https://wa.me/66618268749" class="btn whatsapp-btn" target="_blank">
-    💬 WhatsApp
-  </a>
+<h2>Contact Our Travel Team</h2>
+<p class="lang">Official Licensed Travel Agency · Bangkok</p>
+
+<a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
+<a class="btn line" href="#" onclick="alert('LINE ID: yourlineid')">LINE</a>
+<a class="btn wechat" href="#" onclick="alert('WeChat ID: yourwechatid')">WeChat</a>
 </section>
 
 <footer>
-  © 2026 Licensed Travel Agency · Bangkok
+© 2026 Licensed Travel Agency · Bangkok
 </footer>
 
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.style.display=el.getAttribute('data-lang')===lang?'':'none';
+  });
+  localStorage.setItem('lang',lang);
+}
+
+/* Auto language detect */
+const saved=localStorage.getItem('lang');
+if(saved){
+  setLang(saved);
+}else{
+  const browserLang=navigator.language.startsWith('zh')?'zh':'en';
+  setLang(browserLang);
+}
+</script>
+
+</body>
+</html>
+
