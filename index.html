@@ -1,138 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>China Ski Tour from Bangkok</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>China Ski Tour from Bangkok | Ads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ================= Facebook Pixel ================= -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+  <!-- ===================== -->
+  <!-- Facebook Pixel (替换 PIXEL_ID) -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
+  <!-- ===================== -->
 
-fbq('init', 'YOUR_PIXEL_ID_HERE');
-fbq('track', 'PageView');
-</script>
+  <!-- Google Ads (替换 AW-XXXXXX) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXX');
+  </script>
+  -->
+  <!-- ===================== -->
 
-<!-- ================= Google Ads / GA4 ================= -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXX');
-</script>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
 
-<style>
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;background:#f4f6f8;color:#333}
-header{min-height:500px;background:url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat}
-.overlay{background:rgba(0,0,0,.55);color:#fff;padding:90px 20px}
-.container{max-width:1100px;margin:auto;text-align:center}
-h1{font-size:44px;margin-bottom:12px}
+    header {
+      min-height: 460px;
+      background: url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+    }
 
-section{background:#fff;margin:20px;padding:40px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#fafafa;padding:24px;border-radius:14px}
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 100px 20px;
+    }
 
-.btn{display:inline-block;margin:10px;padding:14px 30px;border-radius:30px;color:#fff;text-decoration:none;font-weight:600;font-size:16px}
-.whatsapp{background:#25D366}
-.line{background:#06C755}
-.wechat{background:#07C160}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-.lang-switch{position:fixed;top:20px;right:20px;z-index:9999}
-.lang-switch button{margin-left:6px;padding:6px 10px;border-radius:6px;border:none;cursor:pointer}
+    h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
 
-footer{text-align:center;padding:30px;color:#777}
-</style>
+    .sub {
+      font-size: 18px;
+      opacity: 0.95;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #ffd54f;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 12px 10px 0;
+      padding: 14px 28px;
+      background: #1e88e5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .btn.green { background:#25D366; }
+    .btn.line { background:#06C755; }
+    .btn.wechat { background:#09b83e; }
+
+    section {
+      background:#fff;
+      margin: 24px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap:20px;
+    }
+
+    .card {
+      background:#fafafa;
+      padding:24px;
+      border-radius:14px;
+      font-weight:500;
+    }
+
+    footer {
+      text-align:center;
+      padding:30px;
+      color:#777;
+      font-size:14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- Language Switch -->
-<div class="lang-switch">
-  <button onclick="setLang('zh')">中文</button>
-  <button onclick="setLang('en')">English</button>
-</div>
-
 <!-- HERO -->
 <header>
-<div class="overlay">
-<div class="container">
+  <div class="overlay">
+    <div class="container">
 
-<h1 data-lang="en">China Ski Tour from Bangkok</h1>
-<p data-lang="en">7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village</p>
+      <!-- EN -->
+      <h1 data-lang="en">China Ski Tour from Bangkok</h1>
+      <div class="sub" data-lang="en">
+        7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village
+      </div>
+      <div class="sub" data-lang="en">
+        Perfect for Beginners, Families & Ski Lovers
+      </div>
+      <div class="price" data-lang="en">
+        Packages from <strong>THB 39,900+</strong>
+      </div>
 
-<h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
-<p data-lang="zh" style="display:none;">7天6晚｜滑雪场 · 冰雪大世界 · 中国雪乡</p>
+      <!-- ZH -->
+      <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
+      <div class="sub" data-lang="zh" style="display:none;">
+        7天6晚｜滑雪场 · 冰雪大世界 · 雪乡
+      </div>
+      <div class="sub" data-lang="zh" style="display:none;">
+        适合初学者 / 家庭 / 滑雪爱好者
+      </div>
+      <div class="price" data-lang="zh" style="display:none;">
+        套餐起价 <strong>THB 39,900+</strong>
+      </div>
 
-<!-- Contact Buttons -->
-<div id="contactBtns"></div>
+      <!-- CTA -->
+      <div style="margin-top:30px;">
+        <a class="btn green" href="https://wa.me/66618268749" target="_blank"
+           onclick="trackLead()">WhatsApp</a>
+        <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank"
+           onclick="trackLead()">LINE</a>
+        <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour"
+           onclick="trackLead()">WeChat</a>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 </header>
 
-<!-- HIGHLIGHTS -->
+<!-- TRUST -->
 <section class="container">
-<h2>Tour Highlights</h2>
-<div class="grid">
-  <div class="card">Top Ski Resorts · Yabuli / Chongli</div>
-  <div class="card">Harbin Ice & Snow World</div>
-  <div class="card">Snow Village Experience</div>
-  <div class="card">Ski Equipment & Coaching</div>
-</div>
+  <h2>Why Book With Us</h2>
+  <div class="grid">
+    <div class="card">✅ Licensed Travel Agency (Bangkok)</div>
+    <div class="card">✅ English / Chinese Service</div>
+    <div class="card">✅ Small Groups / Private Tours</div>
+    <div class="card">✅ Full Support from Thailand to China</div>
+  </div>
 </section>
 
-<!-- CONTACT -->
+<!-- AUDIENCE FILTER -->
 <section class="container">
-<h2>Contact Our Travel Team</h2>
-<div id="contactBtnsBottom"></div>
+  <h2>This Tour Is Perfect For</h2>
+  <div class="grid">
+    <div class="card">✔ First-time Skiers</div>
+    <div class="card">✔ Families with Kids</div>
+    <div class="card">✔ SEA / Thailand Travelers</div>
+    <div class="card">❌ Not for Price-only Inquiries</div>
+  </div>
 </section>
 
 <footer>
-© 2026 Licensed Travel Agency · Bangkok
+  © 2026 Licensed Travel Agency · Bangkok · Ads Landing Page
 </footer>
 
+<!-- Language Switch -->
+<div style="position:fixed; top:20px; right:20px; z-index:9999;">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('zh')">中文</button>
+</div>
+
 <script>
-function contactButtons(lang){
-  const zh = `
-  <a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank" onclick="track('WhatsApp')">WhatsApp 咨询</a>
-  <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank" onclick="track('LINE')">LINE 咨询</a>
-  <a class="btn wechat" href="wechat.html" target="_blank" onclick="track('WeChat')">微信咨询</a>
-  `;
-
-  const en = `
-  <a class="btn whatsapp" href="https://wa.me/66618268749" target="_blank" onclick="track('WhatsApp')">WhatsApp</a>
-  <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank" onclick="track('LINE')">LINE</a>
-  <a class="btn wechat" href="wechat.html" target="_blank" onclick="track('WeChat')">WeChat</a>
-  `;
-
-  return lang === 'zh' ? zh : en;
-}
-
-function track(channel){
-  fbq('track','Contact',{method:channel});
-  gtag('event','contact_click',{method:channel});
-}
-
 function setLang(lang){
   document.querySelectorAll('[data-lang]').forEach(el=>{
     el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
   });
-  document.getElementById('contactBtns').innerHTML = contactButtons(lang);
-  document.getElementById('contactBtnsBottom').innerHTML = contactButtons(lang);
-  localStorage.setItem('lang',lang);
 }
+setLang('en');
 
-/* 默认英文 */
-setLang(localStorage.getItem('lang') || 'en');
+function trackLead(){
+  if(window.fbq){ fbq('track','Lead'); }
+  if(window.gtag){ gtag('event','conversion'); }
+}
 </script>
 
 </body>
