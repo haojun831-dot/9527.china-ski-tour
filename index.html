@@ -5,36 +5,6 @@
   <title>China Ski Tour from Bangkok | Ads</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===================== -->
-  <!-- Facebook Pixel (替换 PIXEL_ID) -->
-  <!--
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  -->
-  <!-- ===================== -->
-
-  <!-- Google Ads (替换 AW-XXXXXX) -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXX');
-  </script>
-  -->
-  <!-- ===================== -->
-
   <style>
     body {
       margin: 0;
@@ -70,7 +40,7 @@
     .sub {
       font-size: 18px;
       opacity: 0.95;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .price {
@@ -82,7 +52,7 @@
 
     .btn {
       display: inline-block;
-      margin: 12px 10px 0;
+      margin: 12px 8px 0;
       padding: 14px 28px;
       background: #1e88e5;
       color: #fff;
@@ -95,6 +65,21 @@
     .btn.green { background:#25D366; }
     .btn.line { background:#06C755; }
     .btn.wechat { background:#09b83e; }
+
+    /* 🔍 Search Bar */
+    .search-box {
+      margin-top: 28px;
+    }
+
+    .search-box input {
+      width: 100%;
+      max-width: 420px;
+      padding: 14px 18px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
 
     section {
       background:#fff;
@@ -115,6 +100,10 @@
       padding:24px;
       border-radius:14px;
       font-weight:500;
+    }
+
+    .hide {
+      display:none !important;
     }
 
     footer {
@@ -158,38 +147,54 @@
       </div>
 
       <!-- CTA -->
-      <div style="margin-top:30px;">
-        <a class="btn green" href="https://wa.me/66618268749" target="_blank"
-           onclick="trackLead()">WhatsApp</a>
-        <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank"
-           onclick="trackLead()">LINE</a>
-        <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour"
-           onclick="trackLead()">WeChat</a>
+      <div style="margin-top:26px;">
+        <a class="btn green" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
+        <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank">LINE</a>
+        <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour">WeChat</a>
+      </div>
+
+      <!-- 🔍 Search -->
+      <div class="search-box">
+        <input
+          type="text"
+          placeholder="Search: ski / snow / family / price..."
+          onkeyup="filterContent(this.value)"
+        />
       </div>
 
     </div>
   </div>
 </header>
 
-<!-- TRUST -->
+<!-- CONTENT -->
 <section class="container">
-  <h2>Why Book With Us</h2>
+  <h2>Tour Highlights</h2>
   <div class="grid">
-    <div class="card">✅ Licensed Travel Agency (Bangkok)</div>
-    <div class="card">✅ English / Chinese Service</div>
-    <div class="card">✅ Small Groups / Private Tours</div>
-    <div class="card">✅ Full Support from Thailand to China</div>
-  </div>
-</section>
 
-<!-- AUDIENCE FILTER -->
-<section class="container">
-  <h2>This Tour Is Perfect For</h2>
-  <div class="grid">
-    <div class="card">✔ First-time Skiers</div>
-    <div class="card">✔ Families with Kids</div>
-    <div class="card">✔ SEA / Thailand Travelers</div>
-    <div class="card">❌ Not for Price-only Inquiries</div>
+    <div class="card searchable">
+      Top Ski Resorts · Yabuli / Chongli · Beginner Friendly
+    </div>
+
+    <div class="card searchable">
+      Harbin Ice & Snow World · Snow Festival · Night Lights
+    </div>
+
+    <div class="card searchable">
+      China Snow Village · Fairytale Winter Landscape
+    </div>
+
+    <div class="card searchable">
+      Ski Equipment & English Coaching Included
+    </div>
+
+    <div class="card searchable">
+      Family Friendly · Kids Welcome · Safe Itinerary
+    </div>
+
+    <div class="card searchable">
+      Price from THB 39,900 · All-in Package
+    </div>
+
   </div>
 </section>
 
@@ -211,9 +216,12 @@ function setLang(lang){
 }
 setLang('en');
 
-function trackLead(){
-  if(window.fbq){ fbq('track','Lead'); }
-  if(window.gtag){ gtag('event','conversion'); }
+function filterContent(keyword){
+  keyword = keyword.toLowerCase();
+  document.querySelectorAll('.searchable').forEach(card=>{
+    const text = card.innerText.toLowerCase();
+    card.classList.toggle('hide', !text.includes(keyword));
+  });
 }
 </script>
 
