@@ -38,3 +38,154 @@
     }
 
     section {
+      background: #fff;
+      margin: 20px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    .lang {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 30px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    /* WhatsApp CTA */
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25D366, #1ebe5d);
+      box-shadow: 0 0 0 rgba(37, 211, 102, 0.6);
+      animation: pulse 2.5s infinite;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      font-size: 18px;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+
+    /* Language switch */
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .lang-switch button {
+      margin-left: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Language Switch -->
+<div class="lang-switch">
+  <button onclick="setLang('zh')">中文</button>
+  <button onclick="setLang('en')">English</button>
+</div>
+
+<!-- HERO -->
+<header>
+  <div class="overlay">
+    <div class="container" style="text-align:center;">
+
+      <!-- English -->
+      <h1 data-lang="en">China Ski Tour from Bangkok</h1>
+      <p data-lang="en" style="font-size:18px; margin-top:10px;">
+        7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village
+      </p>
+      <p data-lang="en" style="margin-top:12px; opacity:0.9;">
+        Perfect for Beginners, Families & Ski Lovers · Full Travel Agency Service
+      </p>
+
+      <!-- Chinese -->
+      <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
+      <p data-lang="zh" style="display:none; font-size:18px; margin-top:10px;">
+        7天6晚｜顶级滑雪场 + 冰雪大世界 + 雪乡体验
+      </p>
+      <p data-lang="zh" style="display:none; margin-top:12px; opacity:0.9;">
+        适合初学者 / 家庭 / 滑雪爱好者 · 全程旅行社服务
+      </p>
+
+      <!-- CTA -->
+      <a href="https://wa.me/66618268749"
+         target="_blank"
+         class="btn whatsapp-btn"
+         id="ctaBtn">
+        💬 Contact us on WhatsApp
+      </a>
+
+      <p class="lang" style="margin-top:16px;">
+        Feb 1 – Feb 7 · 7 Days 6 Nights
+      </p>
+
+    </div>
+  </div>
+</header>
+
+<section class="container">
+  <h2>Tour Highlights</h2>
+  <p class="lang">行程亮点</p>
+  <div class="grid">
+    <div class="card">Top Ski Resorts · 亚布力 / 崇礼</div>
+    <div class="card">Harbin Ice & Snow World · 冰雪大世界</div>
+    <div class="card">Snow Village · 中国雪乡</div>
+    <div class="card">Ski Equipment & Coaching · 滑雪教学</div>
+  </div>
+</section>
+
+<section class="container" style="text-align:center;">
+  <h2>Contact Us</h2>
+  <p class="lang">联系旅行社 · 获取详细行程</p>
+  <a href="https://wa.me/66618268749" class="btn whatsapp-btn" target="_blank">
+    💬 WhatsApp
+  </a>
+</section>
+
+<footer>
+  © 2026 Licensed Travel Agency · Bangkok
+</footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
