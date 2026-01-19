@@ -1,211 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>China Ski Tour from Bangkok | Ads</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>China Ski Tour from Bangkok | Ads</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:#f4f6f8;
+}
+header{
+  min-height:460px;
+  background:url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+}
+.overlay{
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  padding:100px 20px;
+}
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+h1{font-size:42px;margin-bottom:12px;}
+.sub{font-size:18px;opacity:.95;margin-bottom:8px;}
+.price{font-size:20px;color:#ffd54f;font-weight:600;margin-top:10px;}
 
-    header {
-      min-height: 460px;
-      background: url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1600&q=80")
-        center / cover no-repeat;
-    }
+.btn{
+  display:inline-block;
+  margin:12px 6px 0;
+  padding:14px 28px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+.green{background:#25D366;}
+.line{background:#06C755;}
+.wechat{background:#09b83e;}
 
-    .overlay {
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      padding: 100px 20px;
-    }
+.search-box{
+  margin:24px auto 10px;
+}
+.search-box input{
+  width:100%;
+  max-width:420px;
+  padding:14px 18px;
+  border-radius:30px;
+  border:none;
+  font-size:16px;
+  outline:none;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .sub {
-      font-size: 18px;
-      opacity: 0.95;
-      margin-bottom: 8px;
-    }
-
-    .price {
-      font-size: 20px;
-      margin-top: 10px;
-      font-weight: 600;
-      color: #ffd54f;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 12px 8px 0;
-      padding: 14px 28px;
-      background: #1e88e5;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    .btn.green { background:#25D366; }
-    .btn.line { background:#06C755; }
-    .btn.wechat { background:#09b83e; }
-
-    /* 🔍 Search Bar */
-    .search-box {
-      margin-top: 28px;
-    }
-
-    .search-box input {
-      width: 100%;
-      max-width: 420px;
-      padding: 14px 18px;
-      border-radius: 30px;
-      border: none;
-      font-size: 16px;
-      outline: none;
-    }
-
-    section {
-      background:#fff;
-      margin: 24px;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-      gap:20px;
-    }
-
-    .card {
-      background:#fafafa;
-      padding:24px;
-      border-radius:14px;
-      font-weight:500;
-    }
-
-    .hide {
-      display:none !important;
-    }
-
-    footer {
-      text-align:center;
-      padding:30px;
-      color:#777;
-      font-size:14px;
-    }
-  </style>
+section{
+  background:#fff;
+  margin:24px;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.card{
+  background:#fafafa;
+  padding:24px;
+  border-radius:14px;
+  font-weight:500;
+}
+.hide{display:none!important;}
+footer{text-align:center;padding:30px;color:#777;font-size:14px;}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header>
-  <div class="overlay">
-    <div class="container">
+<div class="overlay">
+<div class="container">
 
-      <!-- EN -->
-      <h1 data-lang="en">China Ski Tour from Bangkok</h1>
-      <div class="sub" data-lang="en">
-        7 Days 6 Nights · Ski Resorts · Ice & Snow World · Snow Village
-      </div>
-      <div class="sub" data-lang="en">
-        Perfect for Beginners, Families & Ski Lovers
-      </div>
-      <div class="price" data-lang="en">
-        Packages from <strong>THB 39,900+</strong>
-      </div>
+<!-- EN -->
+<h1 data-lang="en">China Ski Tour from Bangkok</h1>
+<div class="sub" data-lang="en">7 Days 6 Nights · Ski · Ice & Snow World · Snow Village</div>
+<div class="sub" data-lang="en">Perfect for Beginners, Families & Ski Lovers</div>
+<div class="price" data-lang="en">From THB 39,900+</div>
 
-      <!-- ZH -->
-      <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
-      <div class="sub" data-lang="zh" style="display:none;">
-        7天6晚｜滑雪场 · 冰雪大世界 · 雪乡
-      </div>
-      <div class="sub" data-lang="zh" style="display:none;">
-        适合初学者 / 家庭 / 滑雪爱好者
-      </div>
-      <div class="price" data-lang="zh" style="display:none;">
-        套餐起价 <strong>THB 39,900+</strong>
-      </div>
+<!-- ZH -->
+<h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
+<div class="sub" data-lang="zh" style="display:none;">7天6晚｜滑雪 · 冰雪大世界 · 雪乡</div>
+<div class="sub" data-lang="zh" style="display:none;">适合初学者 / 家庭 / 滑雪爱好者</div>
+<div class="price" data-lang="zh" style="display:none;">起价 THB 39,900+</div>
 
-      <!-- CTA -->
-      <div style="margin-top:26px;">
-        <a class="btn green" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
-        <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank">LINE</a>
-        <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour">WeChat</a>
-      </div>
+<!-- 🔍 Search（已在 CTA 上方） -->
+<div class="search-box">
+  <input
+    type="text"
+    placeholder="Search: price / family / beginner / ski..."
+    onkeyup="filterContent(this.value)"
+  />
+</div>
 
-      <!-- 🔍 Search -->
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Search: ski / snow / family / price..."
-          onkeyup="filterContent(this.value)"
-        />
-      </div>
+<!-- CTA -->
+<div>
+  <a class="btn green" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
+  <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank">LINE</a>
+  <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour">WeChat</a>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </header>
 
-<!-- CONTENT -->
 <section class="container">
-  <h2>Tour Highlights</h2>
-  <div class="grid">
-
-    <div class="card searchable">
-      Top Ski Resorts · Yabuli / Chongli · Beginner Friendly
-    </div>
-
-    <div class="card searchable">
-      Harbin Ice & Snow World · Snow Festival · Night Lights
-    </div>
-
-    <div class="card searchable">
-      China Snow Village · Fairytale Winter Landscape
-    </div>
-
-    <div class="card searchable">
-      Ski Equipment & English Coaching Included
-    </div>
-
-    <div class="card searchable">
-      Family Friendly · Kids Welcome · Safe Itinerary
-    </div>
-
-    <div class="card searchable">
-      Price from THB 39,900 · All-in Package
-    </div>
-
-  </div>
+<h2>Tour Highlights</h2>
+<div class="grid">
+  <div class="card searchable">Beginner Friendly Ski Resorts · Yabuli / Chongli</div>
+  <div class="card searchable">Harbin Ice & Snow World · Night Festival</div>
+  <div class="card searchable">China Snow Village · Fairytale Winter</div>
+  <div class="card searchable">English Ski Coach · Equipment Included</div>
+  <div class="card searchable">Family Friendly · Kids Welcome</div>
+  <div class="card searchable">All-in Package · Flights Optional</div>
+</div>
 </section>
 
 <footer>
-  © 2026 Licensed Travel Agency · Bangkok · Ads Landing Page
+© 2026 Licensed Travel Agency · Bangkok · Ads Landing Page
 </footer>
 
-<!-- Language Switch -->
-<div style="position:fixed; top:20px; right:20px; z-index:9999;">
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('zh')">中文</button>
+<div style="position:fixed;top:20px;right:20px;z-index:9999;">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('zh')">中文</button>
 </div>
 
 <script>
@@ -216,11 +145,10 @@ function setLang(lang){
 }
 setLang('en');
 
-function filterContent(keyword){
-  keyword = keyword.toLowerCase();
+function filterContent(k){
+  k=k.toLowerCase();
   document.querySelectorAll('.searchable').forEach(card=>{
-    const text = card.innerText.toLowerCase();
-    card.classList.toggle('hide', !text.includes(keyword));
+    card.classList.toggle('hide', !card.innerText.toLowerCase().includes(k));
   });
 }
 </script>
