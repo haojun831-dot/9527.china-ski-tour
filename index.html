@@ -1,3 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>China Ski Tour | 中国滑雪之旅</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      min-height: 420px;
+      background: url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      background: #fff;
+      margin: 20px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    .lang {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: #1e88e5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
 <header>
   <div class="overlay">
     <div class="container" style="text-align:center;">
@@ -21,22 +107,65 @@
       </p>
 
       <!-- CTA -->
-      <a href="https://wa.me/66618268749"
-         target="_blank"
-         class="btn"
-         data-lang="zh">
-        WhatsApp 立即咨询
-      </a>
+<a href="https://wa.me/66618268749"
+   target="_blank"
+   class="btn"
+   id="ctaBtn"
+   style="margin-top:30px; font-size:18px;">
+  Contact us on WhatsApp
+</a>
 
-      <a href="https://wa.me/66618268749"
-         target="_blank"
-         class="btn"
-         style="display:none;"
-         data-lang="en">
-        Contact us on WhatsApp
-      </a>
 
-    </div>
+
+<section class="container">
+  <h2>Tour Highlights</h2>
+  <p class="lang">行程亮点</p>
+  <div class="grid">
+    <div class="card">Top Ski Resorts · Yabuli / Chongli</div>
+    <div class="card">Harbin Ice & Snow World</div>
+    <div class="card">China Snow Village</div>
+    <div class="card">Ski Equipment & Coaching</div>
   </div>
-</header>
+</section>
+
+<section class="container" style="text-align:center;">
+  <h2>Contact Us</h2>
+  <p class="lang">联系旅行社 · 获取报价</p>
+  <a href="https://wa.me/66618268749" class="btn" target="_blank">
+    WhatsApp 立即咨询
+  </a>
+</section>
+
+<footer>
+  © 2026 Licensed Travel Agency · Bangkok
+</footer>
+
+<!-- Language Switch -->
+<div style="position:fixed; top:20px; right:20px; z-index:9999;">
+  <button onclick="setLang('zh')">中文</button>
+  <button onclick="setLang('en')">English</button>
+</div>
+
+<script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+  });
+
+  // 切换 CTA 文案
+  const cta = document.getElementById('ctaBtn');
+  if (lang === 'zh') {
+    cta.innerText = 'WhatsApp 立即咨询';
+  } else {
+    cta.innerText = 'Contact us on WhatsApp';
+  }
+}
+
+// 默认英文
+setLang('en');
+</script>
+
+</body>
+</html>
 
