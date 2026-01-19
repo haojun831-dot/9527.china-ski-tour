@@ -1,14 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>China Ski Tour | 中国滑雪之旅</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66")
+        center/cover no-repeat;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      background: #fff;
+      margin: 20px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    .lang {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 30px;
+      background: #1e88e5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
 <header>
   <div class="overlay">
     <div class="container">
 
-      <!-- 中文 -->
       <h1 data-lang="zh">中国滑雪之旅</h1>
       <p data-lang="zh">曼谷出发 · 畅玩中国顶级雪场</p>
 
-      <!-- English -->
       <h1 data-lang="en" style="display:none;">China Ski Tour</h1>
       <p data-lang="en" style="display:none;">
         Bangkok Departure · Explore China’s Top Ski Resorts
@@ -20,122 +100,35 @@
   </div>
 </header>
 
-<body>
-
-<header>
-  <div class="overlay">
-    <div class="container">
-      <h1>Bangkok Departure ·<h1>
-China Ski Tour<br>
-<span style="font-size:0.6em;"><h1 data-lang="zh">中国滑雪之旅</h1>
-<h1 data-lang="en" style="display:none;">China Ski Tour</h1>
-
-<p data-lang="zh">从曼谷出发，畅玩中国顶级雪场</p>
-<p data-lang="en" style="display:none;">
-Depart from Bangkok to China’s top ski resorts
-</p>
-
-</h1>
-
-      <p class="lang">曼谷出发 · 中国滑雪7天6晚</p>
-      <p>Travel Dates: 1 – 7 February</p>
-    </div>
-  </div>
-</header>
-
 <section class="container">
   <h2>Tour Highlights</h2>
   <p class="lang">行程亮点</p>
   <div class="grid">
-    <div class="card">
-      <strong>Top Ski Resort in China</strong>
-      <p class="lang">亚布力 / 崇礼等中国知名滑雪场</p>
-    </div>
-    <div class="card">
-      <strong>Harbin Ice & Snow World</strong>
-      <p class="lang">世界级冰雪大世界体验</p>
-    </div>
-    <div class="card">
-      <strong>Snow Village Experience</strong>
-      <p class="lang">童话般的中国雪乡雪景</p>
-    </div>
-    <div class="card">
-      <strong>Ski Equipment & Coaching Available</strong>
-      <p class="lang">可安排雪具租赁及滑雪教学</p>
-    </div>
-  </div>
-</section>
-
-<section class="container">
-  <h2>Itinerary Overview</h2>
-  <p class="lang">行程概览（参考）</p>
-  <ul>
-    <li>Day 1: Bangkok → China | Arrival & Hotel Check-in</li>
-    <li class="lang">第1天：曼谷出发，抵达中国入住酒店</li>
-    <li>Day 2: Harbin City Tour & Ice Festival</li>
-    <li class="lang">第2天：哈尔滨市区 & 冰雪大世界</li>
-    <li>Day 3–4: Ski Resort Full Experience</li>
-    <li class="lang">第3–4天：滑雪场全天滑雪体验</li>
-    <li>Day 5: Snow Village Visit</li>
-    <li class="lang">第5天：雪乡观光拍照</li>
-    <li>Day 6: Return to City / Free Time</li>
-    <li class="lang">第6天：返回市区，自由活动</li>
-    <li>Day 7: Return Flight to Bangkok</li>
-    <li class="lang">第7天：返回曼谷</li>
-  </ul>
-</section>
-
-<section class="container">
-  <h2>Package Includes</h2>
-  <p class="lang">费用包含</p>
-  <div class="grid">
-    <div class="card">✔ Hotel Accommodation (6 Nights)<br><span class="lang">6晚酒店住宿</span></div>
-    <div class="card">✔ Ground Transportation<br><span class="lang">当地交通及接送</span></div>
-    <div class="card">✔ Selected Ski Activities<br><span class="lang">指定滑雪及冰雪活动</span></div>
-    <div class="card">✔ Professional Tour Service<br><span class="lang">专业旅行社服务</span></div>
+    <div class="card">Top Ski Resorts · 亚布力 / 崇礼</div>
+    <div class="card">Harbin Ice & Snow World · 冰雪大世界</div>
+    <div class="card">Snow Village · 中国雪乡</div>
+    <div class="card">Ski Equipment & Coaching · 滑雪教学</div>
   </div>
 </section>
 
 <section class="container" style="text-align:center;">
-  <h2>Contact Our Travel Agency</h2>
-  <p class="lang">联系旅行社 · 获取详细行程与报价</p>
-  <a href="#" class="btn">Contact Us / 立即咨询</a>
+  <h2>Contact Us</h2>
+  <p class="lang">联系旅行社 · 获取报价</p>
+  <a href="https://wa.me/66618268749" class="btn" target="_blank">
+    WhatsApp 咨询
+  </a>
 </section>
 
 <footer>
   © 2026 Licensed Travel Agency · Bangkok
 </footer>
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/66618268749" target="_blank" style="
-position: fixed;
-bottom: 20px;
-right: 20px;
-background-color: #25D366;
-color: white;
-width: 60px;
-height: 60px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 32px;
-text-decoration: none;
-box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-z-index: 9999;
-">
-🟢
-</a>
+
 <!-- Language Switch -->
 <div style="position:fixed; top:20px; right:20px; z-index:9999;">
-  <button onclick="setLang('zh')" style="margin-right:8px;">中文</button>
+  <button onclick="setLang('zh')">中文</button>
   <button onclick="setLang('en')">English</button>
 </div>
-</body>
 
-  <div style="position:fixed; top:20px; right:20px; z-index:9999;">
-  <button onclick="setLang('zh')" style="margin-right:8px;">中文</button>
-  <button onclick="setLang('en')">English</button>
-</div>
 <script>
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
@@ -143,5 +136,7 @@ function setLang(lang) {
   });
 }
 </script>
+
 </body>
 </html>
+
