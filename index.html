@@ -27,7 +27,14 @@
     <div class="container">
       <h1>Bangkok Departure ·<h1>
 China Ski Tour<br>
-<span style="font-size:0.6em;">中国滑雪之旅 · 曼谷出发</span>
+<span style="font-size:0.6em;"><h1 data-lang="zh">中国滑雪之旅</h1>
+<h1 data-lang="en" style="display:none;">China Ski Tour</h1>
+
+<p data-lang="zh">从曼谷出发，畅玩中国顶级雪场</p>
+<p data-lang="en" style="display:none;">
+Depart from Bangkok to China’s top ski resorts
+</p>
+
 </h1>
 
       <p class="lang">曼谷出发 · 中国滑雪7天6晚</p>
@@ -119,5 +126,17 @@ z-index: 9999;
 🟢
 </a>
 
-</body>
+</body> 
+  <div style="position:fixed; top:20px; right:20px; z-index:9999;">
+  <button onclick="setLang('zh')" style="margin-right:8px;">中文</button>
+  <button onclick="setLang('en')">English</button>
+</div>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+  });
+}
+</script>
+
 </html>
