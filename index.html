@@ -100,14 +100,9 @@ footer{
   padding:30px;
   color:#777;
   font-size:14px;
-  background:#f4f6f8;
-}
-footer a{
-  color:#555;
-  text-decoration:underline;
 }
 
-/* 🌐 Language Switch */
+/* 语言切换 */
 .lang-switch{
   position:fixed;
   top:20px;
@@ -124,11 +119,14 @@ footer a{
   font-weight:600;
 }
 
-/* 💬 WhatsApp Floating Button */
-.wa-float{
+/* 多联系悬浮 */
+.contact-float{
   position:fixed;
   bottom:20px;
   right:20px;
+  z-index:9999;
+}
+.contact-main{
   width:56px;
   height:56px;
   background:#25D366;
@@ -138,24 +136,36 @@ footer a{
   align-items:center;
   justify-content:center;
   font-size:26px;
-  text-decoration:none;
+  cursor:pointer;
   box-shadow:0 6px 16px rgba(0,0,0,.25);
-  z-index:9999;
 }
+.contact-options{
+  display:none;
+  flex-direction:column;
+  align-items:flex-end;
+  margin-bottom:10px;
+}
+.contact-options.show{display:flex;}
+.c-btn{
+  margin-top:8px;
+  padding:10px 16px;
+  border-radius:30px;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  font-size:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+.whatsapp{background:#25D366;}
+.line{background:#06C755;}
+.wechat{background:#09b83e;}
 
-/* 📱 Mobile Optimization */
+/* 📱 手机优化 */
 @media (max-width:768px){
   .overlay{padding:70px 16px;}
   h1{font-size:30px;}
   .sub{font-size:15px;}
-  .lang-switch{
-    top:12px;
-    right:12px;
-  }
-  .lang-switch button{
-    padding:6px 10px;
-    font-size:13px;
-  }
+  .lang-switch{top:12px;right:12px;}
 }
 </style>
 </head>
@@ -177,9 +187,7 @@ footer a{
 <div class="price" data-lang="zh" style="display:none;">起价 THB 39,900+</div>
 
 <div class="search-box">
-  <input type="text"
-    placeholder="Search: family / beginner / ski / kids / price…"
-    onkeyup="filterContent(this.value)">
+  <input type="text" placeholder="Search: family / beginner / ski / kids / price…" onkeyup="filterContent(this.value)">
 </div>
 
 <div>
@@ -221,10 +229,16 @@ footer a{
   </div>
 </footer>
 
-<!-- 💬 Floating WhatsApp -->
-<a href="https://wa.me/66618268749" target="_blank" class="wa-float">💬</a>
+<!-- 多联系悬浮 -->
+<div class="contact-float">
+  <div class="contact-options">
+    <a href="https://wa.me/66618268749" target="_blank" class="c-btn whatsapp">WhatsApp</a>
+    <a href="https://line.me/ti/p/XXXXXXXX" target="_blank" class="c-btn line">LINE</a>
+    <a href="weixin://dl/chat?chinaSkiTour" class="c-btn wechat">WeChat</a>
+  </div>
+  <div class="contact-main" onclick="toggleContact()">💬</div>
+</div>
 
-<!-- 🌐 Language Switch -->
 <div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('zh')">中文</button>
@@ -243,6 +257,10 @@ function filterContent(k){
   document.querySelectorAll('.searchable').forEach(card=>{
     card.classList.toggle('hide', !card.innerText.toLowerCase().includes(k));
   });
+}
+
+function toggleContact(){
+  document.querySelector('.contact-options').classList.toggle('show');
 }
 </script>
 
