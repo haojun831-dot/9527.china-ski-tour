@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Terms & Conditions | China Ski Tour</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:#f4f6f8;
+  color:#333;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+h1{
+  margin-top:0;
+  font-size:32px;
+}
+h2{
+  font-size:20px;
+  margin-top:28px;
+}
+p, li{
+  font-size:15px;
+  line-height:1.7;
+}
+ul{
+  padding-left:20px;
+}
+footer{
+  text-align:center;
+  font-size:14px;
+  color:#777;
+  margin-top:40px;
+}
+.lang-switch{
+  position:fixed;
+  top:20px;
+  right:20px;
+}
+.lang-switch button{
+  background:#fff;
+  border:none;
+  border-radius:20px;
+  padding:8px 14px;
+  margin-left:6px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+/* 📱 Mobile */
+@media (max-width:768px){
+  .container{
+    margin:20px;
+    padding:24px;
+  }
+  h1{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="lang-switch">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('zh')">中文</button>
+</div>
+
+<div class="container">
+
+<!-- ================= EN ================= -->
+<div data-lang="en">
+<h1>Terms & Conditions</h1>
+
+<h2>1. Prices & Inclusions</h2>
+<p>
+All prices are starting prices and may vary depending on travel dates, availability,
+group size, and selected options. Package inclusions are subject to final confirmation.
+</p>
+
+<h2>2. Booking & Payment</h2>
+<ul>
+  <li>A deposit may be required to confirm the booking.</li>
+  <li>Full payment must be completed before departure.</li>
+  <li>Payment methods and deadlines will be advised upon booking.</li>
+</ul>
+
+<h2>3. Cancellation & Refund Policy</h2>
+<p>
+Cancellation policies vary depending on suppliers, seasons, and services booked.
+Any cancellation fees will be clearly communicated at the time of booking.
+</p>
+
+<h2>4. Itinerary Changes</h2>
+<p>
+The itinerary may be adjusted due to weather conditions, safety concerns,
+or operational requirements without prior notice.
+</p>
+
+<h2>5. Weather & Force Majeure</h2>
+<p>
+The company is not responsible for delays, changes, or cancellations caused by
+weather, natural disasters, government actions, or other force majeure events.
+</p>
+
+<h2>6. Visa, Insurance & Documents</h2>
+<p>
+Travelers are responsible for ensuring valid passports, visas, and recommended
+travel insurance prior to departure.
+</p>
+
+<h2>7. Liability Disclaimer</h2>
+<p>
+The company acts only as an organizer and is not liable for personal injury,
+loss, delay, or damage caused by third-party suppliers.
+</p>
+
+<h2>8. Images & Marketing Materials</h2>
+<p>
+All images are for illustration purposes only and may not reflect the exact experience.
+</p>
+
+<h2>9. Language Priority</h2>
+<p>
+In case of any discrepancy, the English version of these Terms & Conditions
+shall prevail.
+</p>
+</div>
+
+<!-- ================= ZH ================= -->
+<div data-lang="zh" style="display:none;">
+<h1>条款与细则</h1>
+
+<h2>一、价格与包含项目</h2>
+<p>
+所有价格为参考起价，最终价格将根据出行日期、人数、库存及选择项目而调整，
+具体内容以确认单为准。
+</p>
+
+<h2>二、预订与付款</h2>
+<ul>
+  <li>确认预订时可能需支付订金。</li>
+  <li>出发前需完成全额付款。</li>
+  <li>付款方式及期限将于预订时说明。</li>
+</ul>
+
+<h2>三、取消与退款政策</h2>
+<p>
+取消及退款政策将根据供应商、季节及服务内容而有所不同，
+具体以预订确认时告知为准。
+</p>
+
+<h2>四、行程调整</h2>
+<p>
+因天气、安全或操作需要，行程可能作出调整，恕不另行通知。
+</p>
+
+<h2>五、天气及不可抗力</h2>
+<p>
+如遇恶劣天气、自然灾害、政府行为等不可抗力因素导致的延误、
+变更或取消，本公司不承担相关责任。
+</p>
+
+<h2>六、签证、保险与证件</h2>
+<p>
+旅客需自行确保护照、签证有效，并建议购买旅游保险。
+</p>
+
+<h2>七、责任声明</h2>
+<p>
+本公司仅作为行程组织方，不对第三方供应商造成的任何意外、
+延误、损失或伤害承担责任。
+</p>
+
+<h2>八、图片说明</h2>
+<p>
+所有图片仅供参考，实际体验可能有所不同。
+</p>
+
+<h2>九、语言版本</h2>
+<p>
+如中英文版本存在差异，以英文版本为准。
+</p>
+</div>
+
+<footer>
+© 2026 Licensed Travel Agency · Bangkok
+</footer>
+
+</div>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
+  });
+}
+setLang('en');
+</script>
+
+</body>
+</html>
