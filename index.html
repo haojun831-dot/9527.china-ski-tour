@@ -1,132 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
+<title>China Ski Tour | Bangkok Departure</title>
 
-<title>China Ski Tour from Bangkok | 7 Days Snow & Ski Experience</title>
-
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- SEO -->
-<meta name="description" content="7 Days China Ski Tour from Bangkok. Beginner-friendly ski resorts, Harbin Ice & Snow World, Snow Village. From THB 39,900.">
-<meta name="keywords" content="China ski tour, Bangkok ski tour, Harbin ski, snow village China, beginner ski China">
-
-<meta http-equiv="content-language" content="en">
-<meta name="geo.region" content="TH">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="China Ski Tour from Bangkok">
-<meta property="og:description" content="Beginner-friendly ski tour · Family & kids welcome · From THB 39,900">
-<meta property="og:image" content="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80">
-<meta property="og:url" content="https://yourdomain.com">
-
-<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
 
 <style>
+/* ===== 基础 ===== */
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   background:#f4f6f8;
-}
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  text-align:center;
+  color:#333;
 }
 
-/* ===== Header Video ===== */
-header{
-  position:relative;
-  min-height:460px;
-  overflow:hidden;
-  background:#000;
-}
-header video{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  min-width:100%;
-  min-height:100%;
-  object-fit:cover;
-  z-index:1;
-}
-.overlay{
-  position:relative;
-  z-index:2;
-  background:rgba(0,0,0,.55);
-  color:#fff;
-  padding:80px 20px;
-}
-.video-control{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  z-index:3;
-  background:rgba(0,0,0,.55);
-  color:#fff;
-  border:none;
-  border-radius:30px;
-  padding:8px 14px;
-  cursor:pointer;
-}
-
-h1{font-size:42px;margin-bottom:12px;}
-.sub{font-size:18px;opacity:.95;margin-bottom:8px;}
-.price{font-size:20px;color:#ffd54f;font-weight:600;margin-top:10px;}
-
-.btn{
-  display:inline-block;
-  margin:12px 6px 0;
-  padding:14px 28px;
-  border-radius:30px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-}
-.green{background:#25D366;}
-.line{background:#06C755;}
-.wechat{background:#09b83e;}
-
-.search-box{margin:24px auto 10px;}
-.search-box input{
-  width:100%;
-  max-width:420px;
-  padding:14px 18px;
-  border-radius:30px;
-  border:none;
-  font-size:16px;
-}
-
-section{
-  background:#fff;
-  margin:24px;
-  padding:40px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-.card{
-  background:#fafafa;
-  padding:24px;
-  border-radius:14px;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#777;
-  font-size:14px;
-}
-
-/* 🌍 Language Switch */
+/* ===== 语言切换 ===== */
 .lang-switch{
   position:fixed;
   top:20px;
@@ -141,116 +31,204 @@ footer{
   margin-left:6px;
   cursor:pointer;
   font-weight:600;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
-/* 📱 Mobile */
+/* ===== Header 视频背景 ===== */
+header{
+  position:relative;
+  min-height:480px;
+  overflow:hidden;
+  background:#000;
+}
+
+header video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  min-width:100%;
+  min-height:100%;
+  object-fit:cover;
+  z-index:1;
+}
+
+.overlay{
+  position:relative;
+  z-index:2;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+}
+
+h1{
+  font-size:42px;
+  margin:0 0 10px;
+}
+
+.sub{
+  font-size:17px;
+  margin-top:6px;
+  opacity:.95;
+}
+
+.price{
+  font-size:26px;
+  font-weight:700;
+  margin:18px 0;
+}
+
+/* ===== CTA ===== */
+.btn{
+  display:inline-block;
+  padding:12px 22px;
+  margin:6px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn.green{background:#25D366;}
+.btn.line{background:#06C755;}
+.btn.wechat{background:#09b83e;}
+
+/* ===== 搜索 ===== */
+.search-box{
+  margin:20px 0;
+}
+.search-box input{
+  width:100%;
+  max-width:420px;
+  padding:12px 16px;
+  border-radius:30px;
+  border:none;
+  outline:none;
+}
+
+/* ===== 视频控制 ===== */
+.video-control{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  z-index:3;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  padding:8px 14px;
+  cursor:pointer;
+}
+
+/* ===== Footer ===== */
+footer{
+  text-align:center;
+  font-size:14px;
+  color:#777;
+  padding:30px 16px;
+}
+
+/* ===== 手机优化 ===== */
 @media (max-width:768px){
   header video{display:none;}
   header{
-    min-height:360px;
-    background:url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+    min-height:380px;
+    background:
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url("https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80")
+      center/cover no-repeat;
   }
-  .overlay{padding:60px 16px;}
-  h1{font-size:28px;}
-  .sub{font-size:16px;}
+  h1{font-size:30px;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<video id="heroVideo" autoplay muted loop playsinline>
-  <source src="promo.mp4" type="video/mp4">
-</video>
-<button class="video-control" onclick="toggleVideo()">⏸ Pause</button>
-
-<div class="overlay">
-<div class="container">
-
-<h1 data-lang="en">China Ski Tour from Bangkok</h1>
-<div class="sub" data-lang="en">7 Days 6 Nights · Ski · Ice & Snow World · Snow Village</div>
-<div class="sub" data-lang="en">Perfect for Beginners, Families & Ski Lovers</div>
-<div class="price" data-lang="en">From THB 39,900+</div>
-
-<h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
-<div class="sub" data-lang="zh" style="display:none;">7天6晚｜滑雪 · 冰雪大世界 · 雪乡</div>
-<div class="sub" data-lang="zh" style="display:none;">适合初学者 / 家庭 / 滑雪爱好者</div>
-<div class="price" data-lang="zh" style="display:none;">起价 THB 39,900+</div>
-
-<div class="search-box">
-  <input type="text" placeholder="Search: family / beginner / ski / kids / price…" onkeyup="filterContent(this.value)">
-</div>
-
-<div>
-  <a class="btn green" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
-  <a class="btn line" href="https://line.me/ti/p/XXXXXXXX" target="_blank">LINE</a>
-  <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour">WeChat</a>
-</div>
-
-<div class="sub" style="margin-top:14px;font-size:15px;">
-✔ Licensed Travel Agency · ✔ Local Support · ✔ No Hidden Fees
-</div>
-
-</div>
-</div>
-</header>
-
-<section class="container">
-<h2>Tour Highlights</h2>
-<div class="grid">
-  <div class="card searchable">Beginner Friendly Ski Resorts</div>
-  <div class="card searchable">Harbin Ice & Snow World</div>
-  <div class="card searchable">China Snow Village</div>
-  <div class="card searchable">English Ski Coach Included</div>
-</div>
-</section>
-
-<footer>
-<div data-lang="en">
-© 2026 Licensed Travel Agency · Bangkok ·
-<a href="terms.html" target="_blank">Terms & Conditions</a>
-</div>
-<div data-lang="zh" style="display:none;">
-© 2026 持牌旅行社 · 曼谷 ·
-<a href="terms.html" target="_blank">条款与细则</a>
-</div>
-</footer>
-
-<!-- 悬浮 WhatsApp -->
-<a href="https://wa.me/66618268749" target="_blank"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
-padding:14px 18px;border-radius:50px;font-weight:600;z-index:9999;">
-💬 Chat on WhatsApp
-</a>
-
-<!-- 语言切换 -->
+<!-- 🌐 语言切换 -->
 <div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('zh')">中文</button>
 </div>
 
+<!-- 🎥 Header -->
+<header>
+
+  <video id="heroVideo" autoplay muted loop playsinline>
+    <source src="promo.mp4" type="video/mp4">
+  </video>
+
+  <button class="video-control" onclick="toggleVideo()">⏸ Pause</button>
+
+  <div class="overlay">
+    <div class="container">
+
+      <!-- EN -->
+      <h1 data-lang="en">China Ski Tour from Bangkok</h1>
+      <div class="sub" data-lang="en">7 Days 6 Nights · Ski · Ice & Snow World</div>
+      <div class="sub" data-lang="en">Perfect for Beginners & Families</div>
+      <div class="price" data-lang="en">From THB 39,900+</div>
+
+      <!-- ZH -->
+      <h1 data-lang="zh" style="display:none;">曼谷出发 · 中国滑雪之旅</h1>
+      <div class="sub" data-lang="zh" style="display:none;">7天6晚｜滑雪 · 冰雪大世界</div>
+      <div class="sub" data-lang="zh" style="display:none;">适合初学者 / 家庭</div>
+      <div class="price" data-lang="zh" style="display:none;">起价 THB 39,900+</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search ski / family / price">
+      </div>
+
+      <div>
+        <a class="btn green" href="https://wa.me/66618268749" target="_blank">WhatsApp</a>
+        <a class="btn line" href="#" target="_blank">LINE</a>
+        <a class="btn wechat" href="#">WeChat</a>
+      </div>
+
+      <div class="sub" style="margin-top:14px;font-size:15px;">
+        ✔ Licensed Travel Agency · ✔ Local Support · ✔ No Hidden Fees
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- 👣 Footer -->
+<footer>
+  <div data-lang="en">
+    © 2026 Licensed Travel Agency · Bangkok ·
+    <a href="terms.html" target="_blank">Terms & Conditions</a>
+  </div>
+  <div data-lang="zh" style="display:none;">
+    © 2026 持牌旅行社 · 曼谷 ·
+    <a href="terms.html" target="_blank">条款与细则</a>
+  </div>
+</footer>
+
 <script>
-function toggleVideo(){
-  const v=document.getElementById('heroVideo');
-  const b=document.querySelector('.video-control');
-  if(v.paused){v.play();b.innerText='⏸ Pause';}
-  else{v.pause();b.innerText='▶ Play';}
-}
-
 function setLang(lang){
-  localStorage.setItem('lang',lang);
+  localStorage.setItem('lang', lang);
   document.querySelectorAll('[data-lang]').forEach(el=>{
-    el.style.display=el.getAttribute('data-lang')===lang?'':'none';
+    el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
   });
 }
-setLang(localStorage.getItem('lang')||'en');
+const savedLang = localStorage.getItem('lang') || 'en';
+setLang(savedLang);
 
-function filterContent(k){
-  k=k.toLowerCase();
-  document.querySelectorAll('.searchable').forEach(c=>{
-    c.style.display=c.innerText.toLowerCase().includes(k)?'':'none';
-  });
+function toggleVideo(){
+  const v = document.getElementById('heroVideo');
+  const btn = document.querySelector('.video-control');
+  if(v.paused){
+    v.play();
+    btn.innerText = '⏸ Pause';
+  }else{
+    v.pause();
+    btn.innerText = '▶ Play';
+  }
 }
 </script>
 
