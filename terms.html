@@ -46,6 +46,7 @@ footer{
   position:fixed;
   top:20px;
   right:20px;
+  z-index:9999;
 }
 .lang-switch button{
   background:#fff;
@@ -71,6 +72,7 @@ footer{
 
 <body>
 
+<!-- 语言切换 -->
 <div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('zh')">中文</button>
@@ -199,13 +201,18 @@ shall prevail.
 
 </div>
 
+<!-- ✅ 已优化：语言记忆 -->
 <script>
 function setLang(lang){
+  localStorage.setItem('lang', lang);
   document.querySelectorAll('[data-lang]').forEach(el=>{
-    el.style.display = el.getAttribute('data-lang')===lang ? '' : 'none';
+    el.style.display =
+      el.getAttribute('data-lang') === lang ? '' : 'none';
   });
 }
-setLang('en');
+
+const savedLang = localStorage.getItem('lang') || 'en';
+setLang(savedLang);
 </script>
 
 </body>
