@@ -107,6 +107,13 @@ footer a{
   text-decoration:underline;
 }
 
+/* 🌐 Language Switch */
+.lang-switch{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:9999;
+}
 .lang-switch button{
   background:#fff;
   border:none;
@@ -115,6 +122,40 @@ footer a{
   margin-left:6px;
   cursor:pointer;
   font-weight:600;
+}
+
+/* 💬 WhatsApp Floating Button */
+.wa-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+  z-index:9999;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width:768px){
+  .overlay{padding:70px 16px;}
+  h1{font-size:30px;}
+  .sub{font-size:15px;}
+  .lang-switch{
+    top:12px;
+    right:12px;
+  }
+  .lang-switch button{
+    padding:6px 10px;
+    font-size:13px;
+  }
 }
 </style>
 </head>
@@ -167,14 +208,12 @@ footer a{
 </div>
 </section>
 
-<!-- ✅ 已替换 Footer（双语 + Terms） -->
 <footer>
   <div data-lang="en">
     © 2026 Licensed Travel Agency · Bangkok<br>
     All images for illustration only ·
     <a href="terms.html" target="_blank">Terms & Conditions</a>
   </div>
-
   <div data-lang="zh" style="display:none;">
     © 2026 持牌旅行社 · 曼谷<br>
     图片仅供参考 ·
@@ -182,18 +221,11 @@ footer a{
   </div>
 </footer>
 
-<a href="https://wa.me/66618268749"
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;
-          background:#25D366;color:#fff;
-          padding:14px 18px;border-radius:50px;
-          font-weight:600;text-decoration:none;
-          box-shadow:0 6px 16px rgba(0,0,0,.25);
-          z-index:9999;">
-💬 Chat on WhatsApp
-</a>
+<!-- 💬 Floating WhatsApp -->
+<a href="https://wa.me/66618268749" target="_blank" class="wa-float">💬</a>
 
-<div class="lang-switch" style="position:fixed;top:20px;right:20px;z-index:9999;">
+<!-- 🌐 Language Switch -->
+<div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('zh')">中文</button>
 </div>
