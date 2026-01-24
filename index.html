@@ -94,7 +94,18 @@ section{
   font-weight:500;
 }
 .hide{display:none!important;}
-footer{text-align:center;padding:30px;color:#777;font-size:14px;}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+  font-size:14px;
+  background:#f4f6f8;
+}
+footer a{
+  color:#555;
+  text-decoration:underline;
+}
 
 .lang-switch button{
   background:#fff;
@@ -136,7 +147,6 @@ footer{text-align:center;padding:30px;color:#777;font-size:14px;}
   <a class="btn wechat" href="weixin://dl/chat?chinaSkiTour">WeChat</a>
 </div>
 
-<!-- ✅ 信任背书（已加入） -->
 <div class="sub" style="margin-top:14px;font-size:15px;opacity:.9">
 ✔ Licensed Travel Agency · ✔ Local Support · ✔ No Hidden Fees
 </div>
@@ -157,12 +167,21 @@ footer{text-align:center;padding:30px;color:#777;font-size:14px;}
 </div>
 </section>
 
+<!-- ✅ 已替换 Footer（双语 + Terms） -->
 <footer>
-© 2026 Licensed Travel Agency · Bangkok  
-All images for illustration only · Terms apply
+  <div data-lang="en">
+    © 2026 Licensed Travel Agency · Bangkok<br>
+    All images for illustration only ·
+    <a href="terms.html" target="_blank">Terms & Conditions</a>
+  </div>
+
+  <div data-lang="zh" style="display:none;">
+    © 2026 持牌旅行社 · 曼谷<br>
+    图片仅供参考 ·
+    <a href="terms.html" target="_blank">条款与细则</a>
+  </div>
 </footer>
 
-<!-- 悬浮 WhatsApp -->
 <a href="https://wa.me/66618268749"
    target="_blank"
    style="position:fixed;bottom:20px;right:20px;
